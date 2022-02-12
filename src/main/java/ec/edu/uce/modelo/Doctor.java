@@ -24,25 +24,25 @@ public class Doctor {
 	@Column(name = "doct_id")
 	private Integer id;
 	
-	@Column(name = "doct_id")
+	@Column(name = "doct_cedula")
 	private String cedula;
 	
-	@Column(name = "doct_id")
+	@Column(name = "doct_nombre")
 	private String nombre;
 	
-	@Column(name = "doct_id")
+	@Column(name = "doct_apellido")
 	private String apellido;
 	
-	@Column(name = "doct_id", columnDefinition = "TIMESTAMP")
+	@Column(name = "doct_fecha_nacimiento", columnDefinition = "TIMESTAMP")
 	private LocalDateTime fechaNacimiento;
 	
-	@Column(name = "doct_id")
+	@Column(name = "doct_numero_consultorio")
 	private Integer numeroConsultorio;
 	
-	@Column(name = "doct_id")
+	@Column(name = "doct_codigo_senescyt")
 	private Integer codigoSenescyt;
 	
-	@Column(name = "doct_id")
+	@Column(name = "doct_sueldo")
 	private BigDecimal sueldo;
 	
 	@OneToMany(mappedBy = "doctor",cascade = CascadeType.ALL )
