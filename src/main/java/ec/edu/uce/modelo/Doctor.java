@@ -18,6 +18,8 @@ import javax.persistence.Table;
 @Table(name = "doctor")
 public class Doctor {
 	
+//	Correccion
+	
 	@Id
 	@GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "seq_doctor")
 	@SequenceGenerator(name ="seq_doctor",sequenceName="seq_doctor",allocationSize = 1)

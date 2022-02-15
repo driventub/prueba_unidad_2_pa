@@ -17,6 +17,8 @@ import javax.persistence.Table;
 @Table(name = "cita_medica")
 public class CitaMedica {
 	
+//	Correccion
+	
 	@Id
 	@GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "seq_cime")
 	@SequenceGenerator(name ="seq_cime",sequenceName="seq_cime",allocationSize = 1)
