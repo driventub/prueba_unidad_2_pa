@@ -29,7 +29,8 @@ public class PacienteRepoImpl implements IPacienteRepo {
 	public Paciente buscarPaciente(Integer id) {
 		return this.entityManager.find(Paciente.class, id);
 	}
-
+	
+//	Actualizar
 	@Override
 	public void actualizarPacientePorId(Paciente p) {
 		this.entityManager.merge(p);

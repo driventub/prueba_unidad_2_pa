@@ -8,8 +8,10 @@ import ec.edu.uce.modelo.Doctor;
 import ec.edu.uce.modelo.Paciente;
 
 public interface ICitaMedicaRepo {
-	void agendarCita(CitaMedica cime, Paciente p, Doctor d);
-	void actualizarCita(CitaMedica cime);
-	CitaMedica reporteCita(LocalDateTime fecha, BigDecimal valor);
+	void agendarCita(Integer num, LocalDateTime fecha, BigDecimal val, String lugar, String apellido, Integer codigo); 
+//	void actualizarCita(CitaMedica cime);
+//	CitaMedica reporteCita(LocalDateTime fecha, BigDecimal valor);
+	
+	
 	
 }

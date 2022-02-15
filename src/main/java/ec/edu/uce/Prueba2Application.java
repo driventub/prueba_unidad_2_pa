@@ -11,8 +11,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import ec.edu.uce.modelo.CitaMedica;
 import ec.edu.uce.modelo.Doctor;
 import ec.edu.uce.modelo.Paciente;
+import ec.edu.uce.service.ICitaMedicaService;
 import ec.edu.uce.service.IDoctorService;
 import ec.edu.uce.service.IPacienteService;
 
@@ -24,6 +26,9 @@ public class Prueba2Application implements CommandLineRunner {
 	
 	@Autowired
 	private IDoctorService doctorService;
+	
+	@Autowired
+	private ICitaMedicaService citaService;
 	
 	
 	private static final Logger LOG = LoggerFactory.getLogger(Prueba2Application.class);
@@ -41,19 +46,19 @@ public class Prueba2Application implements CommandLineRunner {
 //		Paciente 1
 		p1.setCedula("123456789-0");
 		p1.setNombre("Ceci");
-		p1.setApellido("Astudillo");
+		p1.setApellido("Mendoza");
 		p1.setFechaNacimiento(LocalDateTime.of(2003,Month.AUGUST,8,12,45));
 		
-		p1.setCodigoIess(6647);
+		p1.setCodigoIess(3216);
 		p1.setEstatura(new BigDecimal("1.9"));
 		p1.setPeso(new BigDecimal("55.4"));
 		
 //		Deberia haber un calculo con la fecha de nacimiento,
 		p1.setEdad(18);
 		
-		
-		this.pacienteService.guardar(p1);
-		LOG.info(p1.toString());
+//		
+//		this.pacienteService.guardar(p1);
+//		LOG.info(p1.toString());
 		
 //		Paciente 2
 		
@@ -70,8 +75,9 @@ public class Prueba2Application implements CommandLineRunner {
 		p2.setEdad(22);
 		
 		
-		this.pacienteService.guardar(p2);
-		LOG.info(p2.toString());
+//		this.pacienteService.guardar(p2);
+//		LOG.info(p2.toString());
+		
 //		Doctor 1
 		
 		d1.setCedula("6647388273-8");
@@ -82,14 +88,14 @@ public class Prueba2Application implements CommandLineRunner {
 		d1.setCodigoSenescyt(388382);
 		d1.setSueldo(new BigDecimal("4000.00"));
 		
-		this.doctorService.guardar(d1);
-		LOG.info(d1.toString());
+//		this.doctorService.guardar(d1);
+//		LOG.info(d1.toString());
 		
-//		Doctor 1
+//		Doctor 2
 		
 		d2.setCedula("173382733-8");
 		d2.setNombre("Luis");
-		d2.setApellido("Anatoa");
+		d2.setApellido("Augusto");
 		d2.setFechaNacimiento(LocalDateTime.of(1964,Month.JUNE,8,12,45));
 		d2.setNumeroConsultorio(202);
 		d2.setCodigoSenescyt(388382);
@@ -97,10 +103,23 @@ public class Prueba2Application implements CommandLineRunner {
 		
 		
 		
-		this.doctorService.guardar(d2);
-		LOG.info(d2.toString());
+//		this.doctorService.guardar(d2);
+//		LOG.info(d2.toString());
+		
+//		Actualizar
+		
+//		d1.setNumeroConsultorio(203);
+//		p2.setPeso(new BigDecimal("65.33"));
+		
+//		this.pacienteService.actualizar(p2);
+//		this.doctorService.actualizar(d1);
 		
 		
+//		Agendar
+		CitaMedica cita = new CitaMedica();
+		
+		
+		this.citaService.agendar(3314, LocalDateTime.of(2022,Month.JUNE,8,12,45), new BigDecimal("22.2"),"Ambato",d2.getApellido(),p1.getCodigoIess()); 
 		
 	}
 

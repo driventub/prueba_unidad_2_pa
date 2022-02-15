@@ -26,6 +26,7 @@ public class DoctorRepoImpl implements IDoctorRepo{
 		
 	}
 
+//	Actualizar
 	@Override
 	public Doctor buscarDoctor(Integer id) {
 		return this.entityManager.find(Doctor.class, id);
