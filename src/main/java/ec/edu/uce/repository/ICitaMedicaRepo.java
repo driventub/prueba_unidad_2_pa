@@ -12,6 +12,8 @@ public interface ICitaMedicaRepo {
 //	void actualizarCita(CitaMedica cime);
 //	CitaMedica reporteCita(LocalDateTime fecha, BigDecimal valor);
 	
+	CitaMedica buscarPorNumero(Integer numero);
 	
+	void actualizar(CitaMedica citaMedica);
 	
 }

@@ -16,6 +16,7 @@ import ec.edu.uce.modelo.Doctor;
 import ec.edu.uce.modelo.Paciente;
 import ec.edu.uce.service.ICitaMedicaService;
 import ec.edu.uce.service.IDoctorService;
+import ec.edu.uce.service.IGestorService;
 import ec.edu.uce.service.IPacienteService;
 
 @SpringBootApplication
@@ -29,6 +30,9 @@ public class Prueba2Application implements CommandLineRunner {
 	
 	@Autowired
 	private ICitaMedicaService citaService;
+	
+	@Autowired
+	private IGestorService gestor;
 	
 	
 	private static final Logger LOG = LoggerFactory.getLogger(Prueba2Application.class);
@@ -116,11 +120,12 @@ public class Prueba2Application implements CommandLineRunner {
 		
 		
 //		Agendar
-		CitaMedica cita = new CitaMedica();
 		
 		
-		this.citaService.agendar(3314, LocalDateTime.of(2022,Month.JUNE,8,12,45), new BigDecimal("22.2"),"Ambato",d2.getApellido(),p1.getCodigoIess()); 
 		
+//		this.citaService.agendar(3314, LocalDateTime.of(2022,Month.JUNE,8,12,45), new BigDecimal("22.2"),"Ambato",d2.getApellido(),p1.getCodigoIess()); 
+		
+		this.gestor.resultadoCita(33221,"Cancer","Paracetamol", LocalDateTime.of(2023,Month.JUNE,8,12,45) );
 	}
 
 }

@@ -32,6 +32,17 @@ public class CitaMedicaServiceImpl implements ICitaMedicaService{
 		}
 		
 	}
+
+	@Override
+	public CitaMedica buscarPorNumero(Integer numero) {
+		return this.cita.buscarPorNumero(numero);
+	}
+
+	@Override
+	public void actualizar(CitaMedica citaMedica) {
+		this.cita.actualizar(citaMedica);
+		
+	}
 	
 	
 	
