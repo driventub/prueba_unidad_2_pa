@@ -10,4 +10,7 @@ public interface IPacienteService {
 	Paciente buscar(Integer i);
 
 	void eliminar(Integer i);
+	
+	Paciente buscarPorCedula(String cedula);
 }
+

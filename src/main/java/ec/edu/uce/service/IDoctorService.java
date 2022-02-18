@@ -10,4 +10,6 @@ public interface IDoctorService {
 	Doctor buscar(Integer i);
 
 	void eliminar(Integer i);
+	
+	Doctor buscarPorCedula(String cedula);
 }

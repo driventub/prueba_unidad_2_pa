@@ -12,4 +12,6 @@ public interface IPacienteRepo {
 	void actualizarPacientePorId(Paciente p);
 
 	void borrarPacientePorId(Integer id);
+	
+	Paciente buscarPorCedula(String cedula);
 }

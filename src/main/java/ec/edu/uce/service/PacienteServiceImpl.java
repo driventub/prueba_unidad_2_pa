@@ -9,29 +9,35 @@ import ec.edu.uce.repository.IPacienteRepo;
 @Service
 public class PacienteServiceImpl implements IPacienteService{
 	@Autowired
-	private IPacienteRepo doctorRepo;
+	private IPacienteRepo pacienteRepo;
 	
 	@Override
 	public void guardar(Paciente g) {
-		this.doctorRepo.insertarPaciente(g);
+		this.pacienteRepo.insertarPaciente(g);
 		
 	}
 
 	@Override
 	public void actualizar(Paciente g) {
-		this.doctorRepo.actualizarPacientePorId(g);
+		this.pacienteRepo.actualizarPacientePorId(g);
 		
 	}
 
 	@Override
 	public Paciente buscar(Integer i) {
 		
-		return this.doctorRepo.buscarPaciente(i);
+		return this.pacienteRepo.buscarPaciente(i);
 	}
 
 	@Override
 	public void eliminar(Integer i) {
-		this.doctorRepo.borrarPacientePorId(i);
+		this.pacienteRepo.borrarPacientePorId(i);
+	}
+
+	@Override
+	public Paciente buscarPorCedula(String cedula) {
+		return this.pacienteRepo.buscarPorCedula(cedula);
+		
 	}
 	
 }	

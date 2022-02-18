@@ -35,4 +35,9 @@ public class DoctorServiceImpl implements IDoctorService {
 		this.doctorRepo.borrarDoctorPorId(i);
 		
 	}
+
+	@Override
+	public Doctor buscarPorCedula(String cedula) {
+		return this.doctorRepo.buscarPorCedula(cedula);
+	}
 }

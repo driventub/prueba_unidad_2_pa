@@ -1,0 +1,7 @@
+2022-02-17 22:27:36 INFO  Prueba2Application:72 - Paciente [id=15, cedula=1438290134-9, nombre=Fernando, apellido=Alonso, fechaNacimiento=2001-08-22T12:45, codigoIess=1234, estatura=1.9, peso=55.4, edad=18]
+2022-02-17 22:27:36 INFO  Prueba2Application:90 - Paciente [id=16, cedula=1028347567-9, nombre=Damien, apellido=Solin, fechaNacimiento=1993-09-19T12:45, codigoIess=3987, estatura=1.57, peso=55.4, edad=22]
+2022-02-17 22:27:36 INFO  Prueba2Application:103 - Doctor [id=15, cedula=190463874-8, nombre=Agustina, apellido=Cardoso, fechaNacimiento=1997-05-02T12:45, numeroConsultorio=202, codigoSenescyt=388382, sueldo=4000.00]
+2022-02-17 22:27:36 INFO  Prueba2Application:118 - Doctor [id=16, cedula=125688737-8, nombre=Guillermo, apellido=Cuaron, fechaNacimiento=1964-06-05T12:45, numeroConsultorio=202, codigoSenescyt=143283, sueldo=3430.00]
+2022-02-17 22:27:36 INFO  CitaMedicaRepoImpl:110 - Longitud 2
+2022-02-17 22:27:36 INFO  CitaMedicaRepoImpl:112 - ReporteCitaMedica [numeroCita=23433, fechaCita=2022-06-08T12:45, valorCita=30.22, fechaControl=2023-06-08T12:45]
+2022-02-17 22:27:36 INFO  CitaMedicaRepoImpl:112 - ReporteCitaMedica [numeroCita=12345, fechaCita=2022-06-08T12:45, valorCita=30.22, fechaControl=2023-06-08T12:45]

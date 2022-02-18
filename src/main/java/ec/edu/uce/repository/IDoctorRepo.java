@@ -10,4 +10,6 @@ public interface IDoctorRepo {
 	void actualizarDoctorPorId(Doctor p);
 
 	void borrarDoctorPorId(Integer id);
+
+	Doctor buscarPorCedula(String cedula);
 }

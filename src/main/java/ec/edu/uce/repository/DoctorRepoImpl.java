@@ -2,12 +2,14 @@ package ec.edu.uce.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+import ec.edu.uce.modelo.Doctor;
 import ec.edu.uce.modelo.Doctor;
 
 
@@ -43,6 +45,16 @@ public class DoctorRepoImpl implements IDoctorRepo{
 		Doctor dBorrar = this.buscarDoctor(id);
 		this.entityManager.remove(dBorrar);
 		
+	}
+
+	@Override
+	public Doctor buscarPorCedula(String cedula) {
+
+		TypedQuery<Doctor> myTypedQuery = (TypedQuery<Doctor>) this.entityManager
+				.createQuery("select c from Doctor c where c.cedula=:valor");
+		myTypedQuery.setParameter("valor", cedula);
+
+		return myTypedQuery.getSingleResult();
 	}
 
 }
